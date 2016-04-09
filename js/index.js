@@ -10,12 +10,7 @@ window.onload
 $(function(){
   var page = 0;
   var maxPage;
-	var mySwiper = new Swiper('#banner', {
-		autoplay: 5000,//可选选项，自动滑动
-		loop : true,
-		pagination : '.swiper-pagination',
-		paginationType : 'bullets',
-	})
+
   var rows = document.getElementById('memberlist').children;
   //瀑布流调整方法
   function puBuJiSuan(){

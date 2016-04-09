@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>我要报名</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="js/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/xgdj.css">
+    <script src="js/baoming.js"></script>
+</head>
+<body>
+  <div class="warp ovh">
+    <!-- banner star -->
+    <div id="banner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="linshiimg/banner.png"></div>
+        <div class="swiper-slide"><img src="linshiimg/banner.png"></div>
+        <div class="swiper-slide"><img src="linshiimg/banner.png"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script type="text/javascript">
+      var mySwiper = new Swiper('#banner', {
+        autoplay: 5000,//可选选项，自动滑动
+        loop : true,
+        pagination : '.swiper-pagination',
+        paginationType : 'bullets',
+      })
+    </script>
+    <!-- banner end -->
+    <!-- 报名 star -->
+    <div id="bmWrap">
+      <p class='baomingStr'>必须关注"小鬼当佳"微信公众号才能参加活动哦</p>
+      <p class='baomingTitle'>填写报名信息</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>姓名</td>
+            <td>
+              <input name="name" placeholder="请输入宝宝姓名"></input>
+            </td>
+          </tr>
+          <tr>
+            <td>联系电话</td>
+            <td>
+              <input name="phone" placeholder="请输入您的电话号码"></input>
+            </td>
+          </tr>
+          <tr>
+            <td style="line-height: .8rem;">上传照片<br/>1~5张</td>
+            <td>
+              <div class='smallImg' style="background-image: url('linshiimg/baby (1).jpg');">
+                <span class='fr'>删除</span>
+              </div>
+              <div class='smallImg' style="background-image: url('linshiimg/baby (2).jpg');">
+                <span class='fr'>删除</span>
+              </div>
+              <div class='smallImg' style="background-image: url('linshiimg/baby (3).jpg');">
+                <span class='fr'>删除</span>
+              </div>
+              <div class='smallImg' style="background-image: url('linshiimg/baby (4).jpg');">
+                <span class='fr'>删除</span>
+              </div>
+              <div id="addImg">+</div>
+            </td>
+          </tr>
+          <tr>
+            <td>描述</td>
+            <td>
+              <textarea placeholder="请输入描述(6~50字)" maxlength="50"></textarea>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class='baomingMSG'>若在线报名失败，可以将报名信息：姓名＋联系电话＋描述＋宝贝照片（1～5张，至少1张）发给我 们：微信［xxxxxx］</p>
+      <p class='baomingTitle'>请选择参赛类别</p>
+      <ul id="xilie" class='choose'>
+        <li class="on">最萌系列</li><li>搞怪系列</li><li>亲子系列</li><li>公主系列</li><li>王子系列</li><li>森林系列</li>
+      </ul>
+      <p class='baomingTitle'>请选择您喜欢的参与奖奖品</p>
+      <ul id="choosejiangping" class='choose'>
+        <li class="on">大白兔</li><li>全家福拍摄</li><li>精美相框</li>
+      </ul>
+      <p class='baomingStr'>奖品详情和图片可参考下方奖品设置</p>
+    </div>
+    <div id="bmSub">确认报名</div>
+    <!-- 报名 end -->
+    <!-- 奖品 star -->
+    <div id="jiangpin" class="ovh">
+      <p class="title">奖品设置</p>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <p class="title">报名须知</p>
+      <div class="jiangpin ovh">
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+    </div>
+    <script language="javascript">
+    var jiangpin = $('.jiangpinImg')
+    var jiangpinSwiper = [];
+    for (var i = 0; i < jiangpin.length; i++) {
+      var thisJP = $('.jiangpinImg').eq(i);
+      jiangpinSwiper[i] = new Swiper(thisJP,{
+        prevButton:thisJP.find('.swiper-button-prev'),
+        nextButton:thisJP.find('.swiper-button-next'),
+        slidesPerView : 2,
+        loop:true,
+      })
+
+    }
+    </script>
+    <!-- 奖品 end -->
+  </div>
+  <ul id="nav">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>

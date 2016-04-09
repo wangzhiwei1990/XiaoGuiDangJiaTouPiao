@@ -5,9 +5,9 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>小鬼投票</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/xgdj.css">
     <script src="js/swiper.min.js"></script>
     <link rel="stylesheet" href="js/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/xgdj.css">
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -23,7 +23,28 @@
 		</div>
     <!-- banner end -->
 		<input type="text" id="search" placeholder="搜名字或编号">
-		<p id='daojishi'>距离活动结束还有:<span>08天05时00分59秒</span></p>
+		<p id='daojishi'>距离活动结束还有:<span data='100000'>08天05时00分59秒</span></p>
+    <script type="text/javascript">
+      // 计算倒计时
+      var daojishiDom = document.getElementById('daojishi').getElementsByTagName('span')[0];
+      var djTimes = parseInt(daojishiDom.getAttribute('data'));
+      console.log(djTimes)
+      function setTime(){
+        var D = parseInt(djTimes/86400),
+          H = parseInt((djTimes%86400)/3600),
+          M = parseInt((djTimes%3600)/60),
+          S = parseInt(djTimes%60);
+          if(D<10)D='0'+D;
+          if(H<10)H='0'+H;
+          if(M<10)M='0'+M;
+          if(S<10)S='0'+S;
+          daojishiDom.innerHTML = D+'天'+H+'时'+M+'分'+S+'秒';
+      }
+      setInterval(function(){
+        djTimes--;
+        setTime();
+      },1000)
+    </script>
 		<ul id="tongji">
 			<li>
 				<p>已报名</p>
@@ -38,7 +59,7 @@
 				<p>5678</p>
 			</li>
 		</ul>
-		<ul id="xilie">
+		<ul id="xilie" class='choose'>
 			<li class="on">最萌系列</li><li>搞怪系列</li><li>亲子系列</li><li>公主系列</li><li>王子系列</li><li>森林系列</li>
 		</ul>
 		<div id="memberlist">
@@ -149,7 +170,82 @@
     <!-- 奖品 star -->
     <div id="jiangpin" class="ovh">
       <p class="title">奖品设置</p>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <p class="title">报名须知</p>
+      <div class="jiangpin ovh">
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
     </div>
+    <script language="javascript">
+    var jiangpin = $('.jiangpinImg')
+    var jiangpinSwiper = [];
+    for (var i = 0; i < jiangpin.length; i++) {
+      var thisJP = $('.jiangpinImg').eq(i);
+      jiangpinSwiper[i] = new Swiper(thisJP,{
+        prevButton:thisJP.find('.swiper-button-prev'),
+        nextButton:thisJP.find('.swiper-button-next'),
+        slidesPerView : 2,
+        loop:true,
+      })
+
+    }
+    </script>
     <!-- 奖品 end -->
 	</div>
 	<ul id="nav">

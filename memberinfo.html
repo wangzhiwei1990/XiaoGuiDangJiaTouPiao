@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>宝宝描述</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="js/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/xgdj.css">
+    <script src="js/memberinfo.js"></script>
+</head>
+<body>
+  <div class="warp ovh">
+    <!-- banner star -->
+    <div id="banner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="linshiimg/banner.png"></div>
+        <div class="swiper-slide"><img src="linshiimg/banner.png"></div>
+        <div class="swiper-slide"><img src="linshiimg/banner.png"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script type="text/javascript">
+      var mySwiper = new Swiper('#banner', {
+        autoplay: 5000,//可选选项，自动滑动
+        loop : true,
+        pagination : '.swiper-pagination',
+        paginationType : 'bullets',
+      })
+    </script>
+    <!-- banner end -->
+    <!-- 信息 star -->
+    <div class="infoWrap ovh">
+      <div class="number">第1234号</div>
+      <img src="linshiimg/baby (8).jpg">
+      <p> 姓名：王宝宝</p>
+      <p>描述：这是我的描述这是我的描述这是我的描述这是我的描述这是我的描述这是我的描述</p>
+      <p>票数：1234</p>
+      <p>排名：26名 距离上一名还差2票</p>
+    </div>
+    <div id="voteSub" class="subBtn">我要投票</div>
+    <div class="infoWrap ovh">
+      <p class="baomingTitle">更多照片</p>
+      <img src="linshiimg/baby (1).jpg">
+      <img src="linshiimg/baby (2).jpg">
+      <img src="linshiimg/baby (3).jpg">
+      <img src="linshiimg/baby (4).jpg">
+    </div>
+    <!-- 信息 end -->
+    <!-- 奖品 star -->
+    <div id="jiangpin" class="ovh">
+      <p class="title">奖品设置</p>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <div class="jiangpin ovh">
+        <strong>参与奖:报名就有奖品</strong>
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+        <div class="jiangpinImg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+                <div class="swiper-slide"><img src="linshiimg/baby (1).jpg"></div>
+            </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      <p class="title">报名须知</p>
+      <div class="jiangpin ovh">
+        <ul>
+          <li>1.这里是说明</li>
+          <li>2.这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明这里是说明</li>
+          <li>3.这里是说明</li>
+        </ul>
+    </div>
+    <script language="javascript">
+    var jiangpin = $('.jiangpinImg')
+    var jiangpinSwiper = [];
+    for (var i = 0; i < jiangpin.length; i++) {
+      var thisJP = $('.jiangpinImg').eq(i);
+      jiangpinSwiper[i] = new Swiper(thisJP,{
+        prevButton:thisJP.find('.swiper-button-prev'),
+        nextButton:thisJP.find('.swiper-button-next'),
+        slidesPerView : 2,
+        loop:true,
+      })
+
+    }
+    </script>
+    <!-- 奖品 end -->
+  </div>
+  <ul id="nav">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>
