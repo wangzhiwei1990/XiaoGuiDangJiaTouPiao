@@ -19,7 +19,7 @@ $(function() {
       ajaxData.Jiang=this.innerHTML;
     }
   }).find('.on').text()
-  var InputDom = $('table').find('input').add('textarea'),
+  var InputDom = $('table').find('input[name]').add('textarea'),
     _RegName = new RegExp(/^[\u4e00-\u9fa5 ]{2,10}$|^[a-zA-Z|\s]{2,20}$/), //中英文姓名
     _RegPhone = new RegExp(/^1[3|4|5|7|8]\d{9}$/),
     _RegTextarea = new RegExp(/^[\s\S]{6,50}$/);
@@ -68,5 +68,10 @@ $(function() {
       return;
     }
     console.log(ajaxData)
+    $('#layerBM').show('fast',function(){
+      var span = $(this).find('span');
+      span[0].innerHTML=ajaxData.Name;
+      span[1].innerHTML=ajaxData.Jiang;
+    })
   })
 })

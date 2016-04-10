@@ -18,9 +18,6 @@ $(function(){
     var smallRow = rows[1-biger];
     var bigerChilds = rows[biger].children;
     var bigerLastChild = bigerChilds[bigerChilds.length-1];
-    console.log(biger)
-    console.log(bigerLastChild.offsetTop)
-    console.log(smallRow.offsetHeight)
     if(bigerLastChild.offsetTop>smallRow.offsetHeight){
       if(biger){
         smallRow.appendChild(bigerLastChild);
@@ -45,4 +42,22 @@ $(function(){
     }
     var star = page
   }*/
+  // 投票按钮
+  $(rows).delegate('a', 'click', function(event) {
+    var id = this.getAttribute('data')
+    if (id) {
+
+      // $.get()
+      $('#layerVote').show('fast', function() {
+
+      })
+    }else{
+      $('#layerVoteCant').show();
+    }
+  });
+  $('.layer').find('ul').find('.no').on('click',function(){
+    $(this).closest('.layer').hide('fast', function() {
+
+    });
+  })
 })

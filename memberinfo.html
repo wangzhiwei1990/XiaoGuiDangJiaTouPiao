@@ -39,7 +39,7 @@
       <p>票数：1234</p>
       <p>排名：26名 距离上一名还差2票</p>
     </div>
-    <div id="voteSub" class="subBtn">我要投票</div>
+    <div id="voteSub" class="subBtn" data='1234'>我要投票</div>
     <div class="infoWrap ovh">
       <p class="baomingTitle">更多照片</p>
       <img src="linshiimg/baby (1).jpg">
@@ -135,5 +135,35 @@
     <li></li>
     <li></li>
   </ul>
+  <div class="layer" id="layerVote">
+    <div class="layerWrap ovh">
+      <div class="layerTitle">我要投票</div>
+      <div class="layerContent ovh">
+        <p>验证码：<img src="linshiimg/yzm.jpg"><span>换一张</span></p>
+        <p><input type="text" maxlength="4" placeholder="请输入验证码" /></p>
+        <div class="erweima">
+          <img src="linshiimg/erweima.png">
+        </div>
+        <ul>
+          <li class='no'>取消</li><li class='yes'>确定</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="layer" id="layerVoteCant">
+    <div class="layerWrap ovh">
+      <div class="layerTitle">你已经投过了</div>
+      <div class="layerContent ovh">
+        <p>每个用户一天只能投一票</p>
+        <p>今天您已经投过了,明天再来吧!</p>
+        <div class="erweima">
+          <img src="linshiimg/erweima.png">
+        </div>
+        <ul>
+          <li class='no'>确定</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
